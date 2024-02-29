@@ -1,0 +1,13 @@
+dbt_dvd:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres-dvd
+      user: user1
+      password: 'password'
+      port: 5432
+      dbname: dvdrental
+      schema: dbt_schema
+      threads: 4
+      secure: False
