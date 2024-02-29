@@ -138,10 +138,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Docker-related files that should not be included
-**/Dockerfile
-**/docker-compose*.yml
-
 # Docker Volumes
 **/data
 

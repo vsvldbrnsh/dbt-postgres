@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  postgres-dvd:
+    image: db-postgres-dvd
+    container_name: postgres_server
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pg-db/pg_data:/var/lib/postgresql/data
+    networks:
+      - postgres-network
+
+  dbt-pg:
+    image: dbt-postgres
+    container_name: dbt_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dbt/dbt_data:/usr/app/dbt/
+    networks:
+      - postgres-network
+
+networks:
+  postgres-network:
+    driver: bridge
