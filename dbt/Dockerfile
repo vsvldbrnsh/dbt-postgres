@@ -23,6 +23,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     git \
     ssh-client \
+    vim \
     software-properties-common \
     make \
     build-essential \
